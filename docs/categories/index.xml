@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Bipolar Artist</title>
-    <link>https://github.com/theninexl/bipolarArtist/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Bipolar Artist</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>es-es</language><atom:link href="https://github.com/theninexl/bipolarArtist/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>es-es</language><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
