@@ -1,0 +1,23 @@
+$colorPalette: (
+    blue-1: #0074AF,
+    blue-2: #7FB9D7,
+    blue-3: #EAF7FE,
+    gray-1: #F2F1F0,
+    gray-2: #2E2D2C,
+    green-1: #45AF93,
+    yellow-1: #FFF600,
+    yellow-2: #F5BD00,
+    orange-1: #F59000,
+    purple-1: #A51162,
+    pink-1: #FF2159,
+    pink-2: #EC3759,
+    fluor-blue-1: #00fff0,
+    white-transp:fade-in(#FFFFFF,0),
+    blue-3-transp:fade-in(#EAF7FE,0),
+    white: #FFFFFF,
+    black: #000000
+);
+
+@function getColor($color) {
+    @return map-get-strict($colorPalette, $color, "getColor");
+}

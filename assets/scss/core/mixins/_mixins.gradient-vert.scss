@@ -1,0 +1,20 @@
+@mixin gradient-vert($color:#F5F5F5, $start:#999, $middle:#333, $stop:#FFF, $middlePos:50%){
+
+        background: $color;
+        background: -webkit-gradient(linear,
+         left bottom,
+         left top,
+         color-stop(0, $start),
+         color-stop($middlePos, $middle),
+         color-stop(1, $stop));
+        background: -ms-linear-gradient(bottom,
+          $start 0%,
+          $middle $middlePos,
+          $stop 100%);
+        background: -moz-linear-gradient(center bottom,
+         $start 0%,
+         $middle $middlePos,
+         $stop 100%);
+        background: -o-linear-gradient(bottom, $stop 0%, $middle $middlePos, $start 100%);
+        background: linear-gradient(to top, $start 0%,$middle $middlePos,$stop 100%); /* W3C */      
+      }

@@ -1,0 +1,11 @@
+.ba-u-text-color {
+    $block: &;
+
+    &--white {
+        color: getColor(white);
+    }
+    
+    &--purple-1 {
+        color: getColor(purple-1);
+    }
+}

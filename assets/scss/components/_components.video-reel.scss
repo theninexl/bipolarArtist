@@ -1,0 +1,24 @@
+.ba-c-video-reel {
+    $block:&;
+
+    height: 50vh;
+    overflow:hidden;
+    position:relative;
+
+    &__video-content {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &__on-top {
+        color: getColor(white);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+}

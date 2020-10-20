@@ -1,0 +1,18 @@
+.ba-u-link-arrow {
+    $block:&;
+
+    &:after {
+        content: '\e803';
+        font-family: "bipo18";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        margin-right: 0;
+        line-height: 1em;
+        margin-left: 5px;
+        -webkit-font-smoothing: antialiased;
+    }
+}

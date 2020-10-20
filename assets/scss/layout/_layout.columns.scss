@@ -1,0 +1,95 @@
+.ba-l-cols {
+    $block:&;
+
+    &-md-1-narrow {
+        max-width: calc(100%/12 * 10);
+        margin: 0 calc(100%/12 * 1);
+    }
+
+    &-md-2 {
+        @media screen and (min-width: getBreakpoint(pantalla-md)){
+            display:flex;
+            flex-direction: row;
+
+            #{ $block }__col {
+                flex-basis:50%;
+
+                &:first-child {
+                    padding-right: getGutter(gutter) / 2;
+                }
+
+                &:last-child {
+                    padding-left: getGutter(gutter) / 2;
+                }
+            }
+        }
+
+        @media screen and (min-width: getBreakpoint(pantalla-lg)){
+            #{ $block }__col {
+                &:first-child {
+                    padding-right: getGutter(halfgutter) / 2;
+                }
+
+                &:last-child {
+                    padding-left: getGutter(halfgutter) / 2;
+                }
+            }
+        }
+    }
+
+    &-md-3 {
+        @media screen and (min-width: getBreakpoint(pantalla-md)){
+            display:flex;
+            flex-direction: row;
+
+            #{ $block }__col {
+                flex-basis:33%;
+
+                &:first-child {
+                    padding-right: getGutter(gutter) / 2;
+                }
+                &:last-child {
+                    padding-left: getGutter(gutter) / 2;
+                }
+
+                &:nth-child(2) {
+                    padding: 0 getGutter(gutter) / 2;
+                }
+            }
+
+            @media screen and (min-width: getBreakpoint(pantalla-lg)){
+                &:first-child {
+                    padding-right: getGutter(halfgutter) / 2;
+                }
+                &:last-child {
+                    padding-left: getGutter(halfgutter) / 2;
+                }
+
+                &:nth-child(2) {
+                    padding: 0 getGutter(halfgutter) / 2;
+                }
+            }
+        }
+    }
+
+    &-md-40-60 {
+        @media screen and (min-width: getBreakpoint(pantalla-md)){
+            display:flex;
+            flex-direction: row;
+
+            #{ $block }__col {
+
+                &:first-child {
+                    flex-basis:40%;
+                    padding-right: getGutter(gutter) / 2;
+                }
+
+                &:last-child {
+                    flex-basis:60%;
+                    padding-left: getGutter(gutter) / 2;
+                }
+            }
+        }
+    }
+
+}

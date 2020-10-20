@@ -1,0 +1,92 @@
+.ba-c-hello-section {
+    $block:&;
+    background-color: getColor(gray-1);
+    background-image: url('/images/imgContent/graydrops-texture-2.png');
+    background-repeat: repeat;
+    background-size:50% auto;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__deco-side {
+        flex-basis:25%;
+
+        display:flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+
+    &__content {
+        flex-basis:75%;
+    }
+
+    .deco-side {
+        $block:&;
+
+        &__icon {
+            img {
+                margin:0 auto;
+                width: 75%;
+            }
+        }
+
+        
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-sm)){
+        background-size:18% auto;
+
+        .deco-side {
+            $block:&;
+
+            &__icon {
+                img {
+                    margin-left:0;
+                    width: 50%;
+                }
+            }
+
+            &__title {
+                h2 {
+                    margin-bottom:0;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-md)){
+
+        &__deco-side {
+            flex-basis:calc(100%/12*3);
+    
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-right: getGutter(gutter);
+        }
+
+        .deco-side {
+            $block:&;
+
+            &__icon {
+                flex-basis:50%;
+    
+                img {
+                    margin-top:getLines(1);
+                    width:80%;
+                }
+            }
+
+            &__title {
+                flex-basis:50%;
+                h2 {
+                    margin-bottom:0;
+                }
+            }
+        }
+            
+    }
+
+}

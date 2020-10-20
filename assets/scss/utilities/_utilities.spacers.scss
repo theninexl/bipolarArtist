@@ -1,0 +1,61 @@
+.ba-u-spacer {
+    $block:&;
+
+    &-mt-simple {
+        margin-top: getLines(1);
+    }
+
+    &-mt-double {
+        margin-top: getLines(2);
+    }
+
+    &-mt-huge {
+        margin-top: getLines(4);
+    }
+
+    &-mb-simple {
+        margin-bottom: getLines(1);
+    }
+
+    &-mb-double {
+        margin-bottom: getLines(2);
+    }
+
+    &-mb-huge {
+        margin-bottom: getLines(4);
+    }
+
+    &-pt-simple {
+        padding-top: getLines(1);
+    }
+
+    &-pt-double {
+        padding-top: getLines(2);
+    }
+
+    &-pt-huge {
+        padding-top: getLines(4);
+    }
+
+    &-pb-simple {
+        padding-bottom: getLines(1);
+    }
+
+    &-pb-double {
+        padding-bottom: getLines(2);
+    }
+
+    &-pb-huge {
+        padding-bottom: getLines(4);
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-lg)) {
+        &-mt-double-lrg-screen {
+            margin-top: getLines(4);
+        }
+
+        &-mb-double-lrg-screen {
+            margin-bottom: getLines(4);
+        }
+    }
+}

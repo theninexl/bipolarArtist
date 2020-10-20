@@ -1,0 +1,252 @@
+// import WC fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&family=Raleway:wght@700&display=swap');
+
+
+@font-face {
+    font-family: 'knuckle';
+    src: url('/fonts/dk_knucklebones.woff2') format('woff2'),
+       url('/fonts/dk_knucklebones.woff') format('woff'),
+       url('/fonts/dk_knucklebones.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+font-family: 'bipo18';
+src: url('/fonts/bipo18.eot?63516000');
+src: url('/fonts/bipo18.eot?63516000#iefix') format('embedded-opentype'),
+     url('/fonts/bipo18.woff2?63516000') format('woff2'),
+     url('/fonts/bipo18.woff?63516000') format('woff'),
+     url('/fonts/bipo18.ttf?63516000') format('truetype'),
+     url('/fonts/bipo18.svg?63516000#bipo18') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+    font-family: 'butlermedium';
+    src: url('/fonts/butler_medium-webfont.woff2') format('woff2'),
+         url('/fonts/butler_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butlerblack';
+    src: url('/fonts/butler_black-webfont.woff2') format('woff2'),
+         url('/fonts/butler_black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+//font-family
+$tipo-family:'Open Sans', sans-serif;
+
+//pesos
+$tipo-normal:400;
+$tipo-normal-italic:400i;
+$tipo-bold:700;
+$tipo-bold-italic:700i;
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "bipo18";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+   
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+   
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+   
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+   
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+   
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+   
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+
+body {
+    @include font-size($defFontSize, $defLineHeight); 
+    @include os-normal;
+}
+
+h1, .superbig{
+	@include font-size($defH1,$defLineHeight*2);
+	@include margins(1,1);
+    @include os-normal;
+}
+
+h2, .bigger{
+	@include font-size($defH2,$defLineHeight);
+	@include margins(1,1);
+    @include os-bold;
+}
+
+h3, .big{
+	@include font-size($defH3,$defLineHeight);
+	@include margins(1,1);
+    @include os-normal;
+}
+
+h4{
+	@include font-size($defH4,$defLineHeight);
+	@include margins(1,1);
+}
+
+p, ul, ol, pre, table, blockquote, .t0 {
+    @include font-size($defFontSize,$defLineHeight);
+	@include margins(1,1);
+    padding: 0;
+}
+
+p.small {
+  @include font-size($s3,$defLineHeight);
+  @include margins(1,1);
+}
+
+h1, h2, h3, p, span {
+    .serif {
+        @include os-butler-medium; 
+    }
+
+    .serifbold, .serif strong {
+        @include os-butler-bold; 
+    }
+
+    .max-size {
+        @include font-size($defH1Max,$defLineHeight*2);
+	    @include margins(1,1);
+    }
+
+    .supermax-size {
+        @include font-size($defH1Huge,$defLineHeight*5);
+	    @include margins(1,1);
+    }
+}
+
+@media screen and (max-width: getBreakpoint(pantalla-md)) {
+
+    h1, h2, h3, p, span {
+    
+        .max-size {
+            @include font-size($defH1,$defLineHeight*2);
+            @include margins(1,1);
+        }
+    
+        .supermax-size {
+            @include font-size($defH1Max,$defLineHeight*2);
+            @include margins(1,1);
+        }
+    }
+
+}
+
+
+@media screen and (max-width: getBreakpoint(pantalla-sm)) {
+    
+    body {
+        @include font-size($defFontSizeMob, $defLineHeightMob);
+    }
+
+    h1, .superbig {
+        @include font-size($defH1Mob,$defLineHeightMob*2);
+        @include margins(1,1);
+    }
+
+    h2, .bigger {
+        @include font-size($defH2Mob,$defLineHeightMob);
+        @include margins(1,1);
+    }
+    
+    h3, .big {
+        @include font-size($defH3Mob,$defLineHeightMob);
+        @include margins(1,1);
+}
+    
+    p, ul, ol, pre, table, blockquote, .t0 {
+        @include font-size($defFontSizeMob,$defLineHeightMob);
+        @include margins(1,1);
+        padding: 0;
+    }
+    
+    p.small {
+      @include font-size($s3,$defLineHeight);
+      @include margins(0,1);
+    }
+
+    h1, h2, h3, p, span {
+    
+        .max-size {
+            @include font-size($defH2Mob,$defLineHeightMob);
+            @include margins(1,1);
+        }
+    
+        .supermax-size {
+            @include font-size($defH1MobMax,$defLineHeightMob*2);
+            @include margins(1,1);
+        }
+    }
+
+}
+
+.normal
+{
+    @include os-normal;
+}
+
+.script {
+    @include os-script;
+}
+
+i, em {
+    @include os-normal-italic;
+}
+
+strong, .strong {
+	@include os-bold;
+}
+
+strong i, strong em {
+    @include os-bold-italic;
+}
+
+
+.small {
+	@include font-size(16,19);
+	margin-top: 32px;
+	margin-bottom: 13px;
+}
+
+a:hover, a:active
+{
+	text-decoration: none;
+}
+
+.icon-down-open:before { content: '\e800'; } /* '' */
+.icon-up-open:before { content: '\e801'; } /* '' */
+.icon-left-open:before { content: '\e802'; } /* '' */
+.icon-right-open:before { content: '\e803'; } /* '' */
+.icon-bipo-fb:before { content: '\e804'; } /* '' */
+.icon-bipo-ig:before { content: '\e805'; } /* '' */
+.icon-bipo-sc:before { content: '\e806'; } /* '' */

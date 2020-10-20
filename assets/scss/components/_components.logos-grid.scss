@@ -1,0 +1,53 @@
+.ba-c-logos-grid {
+    $block:&;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: getGutter(halfgutter);
+    margin-right: getGutter(halfgutter);
+
+    &__item {        
+        flex-basis:25%;
+        flex-grow:0;
+        height: getLines(2);
+        margin-right: getGutter(halfgutter);
+
+        &:last-child {
+            margin-right:0;
+        }
+
+        &.imgEncaja {
+            position:relative;
+            overflow:hidden;
+        }
+
+        @media screen and (min-width: getBreakpoint(pantalla-sm)){
+            flex-basis:18%;
+        }    
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-md)){
+        justify-content: space-evenly;
+        height: auto;
+        margin-left:0;
+        margin-right:0;
+
+        &__item {
+            flex-basis: 13%;
+            height: getLines(3);
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: getLines(1);
+        }
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-lg)){
+        &__item {
+            flex-basis: 10%;
+            margin-left: getGutter(halfgutter);
+            margin-right: getGutter(halfgutter);
+            
+        }
+    }
+}

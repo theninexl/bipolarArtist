@@ -1,0 +1,42 @@
+.ba-l-colorBg {
+    $block: &;
+
+    &--gray-1 {
+        background-color: getColor(gray-1);
+
+        color:getColor(gray-2);
+
+        a, a:hover {
+            color: getColor(gray-2);
+        }
+    }
+
+    &--yellow-1 {
+        background-color: getColor(yellow-1);
+
+        color:getColor(gray-2);
+
+        a, a:hover {
+            color: getColor(gray-2);
+        }
+    }
+
+    &--orange-1 {
+        background-color: getColor(orange-1);
+
+        color:getColor(gray-2);
+
+        a, a:hover {
+            color: getColor(gray-2);
+        }
+    }
+
+    &--purple-1 {
+        background-color: getColor(purple-1);
+        color:getColor(white);
+
+        a, a:hover {
+            color: getColor(white);
+        }
+    }
+}

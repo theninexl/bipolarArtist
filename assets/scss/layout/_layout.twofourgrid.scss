@@ -1,0 +1,43 @@
+.ba-l-two-four-grid {
+    $block:&;
+
+    display: grid;
+    grid-template-columns:
+        1fr
+        100%
+        1fr;
+
+    & > div {
+        grid-column: 2;
+    }
+
+    & > div.full-bleed {
+            width: 100%;
+            grid-column: 1 / 4;
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-sm)) {
+        grid-template-columns:
+        1fr
+        768px
+        1fr;
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-md)){
+
+        grid-template-columns:
+        1fr
+        1200px
+        1fr;
+
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-lg)){
+
+        grid-template-columns:
+        1fr
+        1680px
+        1fr;
+
+    }
+}

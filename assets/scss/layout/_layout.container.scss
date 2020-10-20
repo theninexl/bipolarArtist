@@ -1,0 +1,76 @@
+.ba-l-container{
+    $block: &;
+    @include ba-container;
+
+    &--big-padding {
+        padding-top: getLines(2);
+        padding-bottom: getLines(2);
+    }
+
+    &--big-top-padding {
+        padding-top: getLines(3);
+        @media screen and (min-width: getBreakpoint(pantalla-sm)){
+            padding-top: getLines(5);
+        }
+    }
+
+    &--big-bottom-padding {
+        padding-bottom: getLines(3);
+        @media screen and (min-width: getBreakpoint(pantalla-sm)){
+            padding-bottom: getLines(5);
+        }
+    }
+
+    &--stats {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    &--stats__figure {
+        flex-basis:100%;
+        flex-grow: 1;
+        text-align:left;
+        text-transform: uppercase;
+
+        p {
+            display:flex;
+            flex-direction:row;
+            align-items: center;
+            justify-content: left;
+            margin: 0 calc(100%/12 * 1);
+            @include font-size($s3,$defLineHeight);
+            @include margins(0,1);
+        }
+
+        .figure-primary {
+            
+        }
+
+        .figure-secondary {
+            margin-left: getGutter(halfgutter);
+        }
+
+        .supermax-size, .max-size {
+            margin:0;
+        }
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-sm)) {
+        &--stats__figure {
+            align-self: center;
+            flex-basis: 20%;
+
+
+            p {
+                flex-direction: column;
+                margin:0;
+            }
+
+            .figure-secondary {
+                margin-left:0;
+            }
+        }
+    }
+}

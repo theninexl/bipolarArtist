@@ -1,0 +1,44 @@
+{{- $jqueryPath := "/js/jquery/jquery.min.js" }}
+{{- $jquery := resources.Get $jqueryPath | resources.ExecuteAsTemplate $jqueryPath . }}
+
+{{- $jqueryEasingPath := "/js/jquery.easing/jquery.easing.min.js" }}
+{{- $jqueryEasing := resources.Get $jqueryEasingPath | resources.ExecuteAsTemplate $jqueryEasingPath . }}
+
+{{- $jqueryRotatePath := "/js/jquery-rotate/jQueryRotate.js" }}
+{{- $jqueryRotate := resources.Get $jqueryRotatePath | resources.ExecuteAsTemplate $jqueryRotatePath . }}
+
+{{- $bootstrapPath := "/js/bootstrap/bootstrap.min.js" }}
+{{- $bootstrap := resources.Get $bootstrapPath | resources.ExecuteAsTemplate $bootstrapPath . }}
+
+{{- $imagesLoadedPath := "/js/imagesloaded/imagesloaded.pkgd.min.js" }}
+{{- $imagesLoaded := resources.Get $imagesLoadedPath | resources.ExecuteAsTemplate $imagesLoadedPath . }}
+
+{{- $ekkoLightBoxPath := "/js/ekko-lightbox/ekko-lightbox.min.js" }}
+{{- $ekkoLightBox := resources.Get $ekkoLightBoxPath | resources.ExecuteAsTemplate $ekkoLightBoxPath . }}
+
+{{- $flickityPath := "/js/flickity/flickity.pkgd.min.js" }}
+{{- $flickity := resources.Get $flickityPath | resources.ExecuteAsTemplate $flickityPath . }}
+
+{{- $jsnoePath := "/js/noe.js" }}
+{{- $jsnoe := resources.Get $jsnoePath | resources.ExecuteAsTemplate $jsnoePath . }}
+
+{{- $slotmachinePath := "/js/jquery-slotmachine/slotmachine.min.js" }}
+{{ $slotmachine := resources.Get $slotmachinePath | resources.ExecuteAsTemplate $slotmachinePath . }}
+
+{{- $jquerySlotmachinePath := "/js/jquery-slotmachine/jquery.slotmachine.min.js" }}
+{{ $jquerySlotmachine := resources.Get $jquerySlotmachinePath | resources.ExecuteAsTemplate $jquerySlotmachinePath . }}
+
+
+{{- $bundle := slice $jquery $jqueryEasing $jqueryRotate $bootstrap $imagesLoaded $ekkoLightBox $flickity $slotmachine $jquerySlotmachine | resources.Concat "/js/bundle.js" | resources.Minify  }}
+<script src = '{{ $bundle.Permalink }}'></script>
+
+<!--<script src="{{ $jquery.Permalink }}"></script>
+<script src="{{ $jqueryEasing.Permalink }}"></script>
+<script src="{{ $jqueryRotate.Permalink }}"></script>
+<script src="{{ $bootstrap.Permalink }}"></script>
+<script src="{{ $imagesLoaded.Permalink }}"></script>
+<script src="{{ $ekkoLightBox.Permalink }}"></script>
+<script src="{{ $flickity.Permalink }}"></script>
+<script src="{{ $slotmachine.Permalink }}"></script>
+<script src="{{ $jquerySlotmachine.Permalink }}"></script>-->
+<script src="{{ $jsnoe.Permalink }}"></script>

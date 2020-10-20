@@ -1,0 +1,8 @@
+.ba-o-top-tag {
+    @include os-bold;
+    background-color: getColor(yellow-1);
+    color: getColor(gray-2);
+    display: inline-block;
+    padding: 0 getGutter(halfgutter);
+    text-transform: uppercase;
+}

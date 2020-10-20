@@ -1,0 +1,8 @@
+$gutters: (
+    gutter: 30px,
+    halfgutter: 15px,
+);
+
+@function getGutter($size) {
+    @return map-get-strict($gutters, $size, "getGutter");
+}

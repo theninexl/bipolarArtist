@@ -1,0 +1,46 @@
+.ba-c-works-grid {
+    $block:&;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__item {
+        flex-basis: 50%;
+    }
+
+    &__item-wrapper {
+        display:block;
+        height: getLines(6);
+        overflow: hidden;
+        position:relative;
+    }
+
+    &__item-tag {
+        @include os-bold;
+        background-color: getColor(yellow-1);
+        height: getLines(1);
+        padding: 0 5px;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 1;
+    }
+
+    &__item-image {
+        display: block;
+        height:100%;
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-sm)){
+        &__item {
+            flex-basis: 25%;
+        }
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-md)){
+
+        &__item-wrapper {
+            height: getLines(10);
+        }
+    }
+}

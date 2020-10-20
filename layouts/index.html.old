@@ -1,0 +1,67 @@
+
+{{ define "main" }}
+    <div class="page-template-full-home">
+        <div id="layersIntro">
+            <div id="layer1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12" style="padding:0;">
+                            <div id="textIntro">
+                                <div id="text1"><h1>Hola</h1></div>
+                                <div id="text2">
+                                    <h3>It's not often you find a creative agency that gets you like we do. <br class="mobhide"> We embrace change, craft stories and create experiences.<br>We are Bipolar Artist.</h3>
+                                </div>
+                                <div id="chooseButton"><a><span class="bigger">See our stories</span> <img  src="/images/arrow-left.svg"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bgIntro"><img  src="/images/pattern-HP-02.png"></a></div>
+            </div>
+            <div id="layer2" style="background-color:white;">
+                <section class="container-fluid sides-header slotMachine">
+                    <div class="row concept">
+                        <div class="col-xs-6 slotBox txt-right no-padding">
+                                <div  id="slotImg1"></div>
+                            </div>
+                            <div class="col-xs-6 slotBox txt-left no-padding">
+                                <div id="slotImg2"></div>
+                            </div>
+                    </div>
+                    <div class="row foot">
+                        <div class="col-xs-6 footpat"><div class="blue"></div></div>
+                        <div class="col-xs-6 footpat"><div class="red"></div></div>
+                    </div>
+                    <div class="row title">
+                        <div class="col-xs-12 slotBox">
+                            <div class="col-xs-6 slotMachineTitle txt-right">
+                                <div id="slotText1"></div>
+                            </div>
+                            <div class="col-xs-6 slotMachineTitle txt-left">
+                                <div id="slotText2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="intro">
+                    <div class="container">
+
+                        <div class="row content">
+                            <div id="reload" class="col-md-8 col-md-offset-2 col-xs-12">							
+                                <p class="center home-description" id="hr" style="margin-top:0;">It's not often you find a creative agency that gets you like we do. <br> We embrace change, craft stories and create experiences.</p>
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                                <p class="center" style="margin-top:0;">
+                                    <a href="creating-change.html" class="jump-link view" id="view-story-button"><img  src="/images/jump-butt-view.svg" class="opened-eye" alt="load another story"><img  src="/images/jump-butt-view-closed.svg" class="closed-eye" style="display:none;"><br><span class="center" style="margin-top:0;"><strong>View</strong> this story</span></a>&nbsp;&nbsp;or&nbsp;&nbsp;<a class="jump-link reload"  id="reload-button"><img src="/images/jump-butt-reload.svg" alt="load another story" id="reload-img"><br><span class="center" style="margin-top:0;"><strong>Change</strong> it</span></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>  
+            </div>
+        </div>
+    </div>			
+</div>
+
+
+{{end}}

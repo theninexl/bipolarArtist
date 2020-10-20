@@ -1,0 +1,10 @@
+@mixin font-size($sizeValue, $lineHeight){
+	$remValue: $sizeValue / 10;
+	$pxValue: $sizeValue;
+	$linePxValue: $lineHeight;
+	$lineRemValue: $linePxValue / 10;
+	font-size: $pxValue * 1px; 
+	font-size: $remValue * 1rem;
+	line-height: $linePxValue * 1px; 
+	line-height: $lineRemValue * 1rem;  
+}

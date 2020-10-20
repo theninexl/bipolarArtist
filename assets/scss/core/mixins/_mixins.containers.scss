@@ -1,0 +1,24 @@
+@mixin ba-container {
+    margin-left: getGutter(halfgutter);
+    margin-right: getGutter(halfgutter);
+
+    @media screen and (min-width: getBreakpoint(pantalla-sm)) {
+        max-width: getBreakpoint(pantalla-sm);
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 getGutter(halfgutter);
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-md)){
+        max-width: getBreakpoint(pantalla-md);
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 getGutter(gutter);
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-lg)){
+        max-width: getBreakpoint(pantalla-lg);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

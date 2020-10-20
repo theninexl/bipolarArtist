@@ -1,0 +1,44 @@
+//variables para construir los tamaños de la tipo
+
+html {
+    font-size: 62.5%; /* Transformamos a Base 10px para calcular REMs más facilmente*/
+}
+
+//Tamaño para desktop/movil sin meter la unidad
+$defFontSize:16;
+$defFontSizeMob:16;
+
+//factores escalado desktop
+$factorLineHeight:1.9; 
+$factorScaleFont:1.333; 
+
+//factores escalado en moviles
+$factorLineHeightMob: 1.9; 
+$factorScaleFontMob:1.333;
+
+//calculo LineHeight base
+$defLineHeight: round($defFontSize * $factorLineHeight); //30px
+$defLineHeightMob: round($defFontSizeMob * $factorLineHeightMob); //30px
+
+// operaciones escalado Hs (saltos de 1 unidad)
+$defH4: round($defFontSize * $factorScaleFont ); //21px
+$defH3: round($defFontSize * $factorScaleFont ); //21px
+$defH2: round($defH3 * $factorScaleFont ); //28px
+$defH1: round($defH2 * $factorScaleFont ); //37px
+$defH1Max: ceil($defH1 * $factorScaleFont ); //50px
+$defH1Huge: (round($defH1Max * $factorScaleFont))*2; //134px
+
+$defH4Mob: $defFontSizeMob; //16px
+$defH3Mob: round($defFontSizeMob * $factorScaleFontMob ); //21
+$defH2Mob: round($defH3Mob * $factorScaleFontMob ); //28
+$defH1Mob: round($defH2Mob * $factorScaleFontMob ); //37
+$defH1MobMax: ceil($defH1 * $factorScaleFont ); //50px
+$defH1MobHuge: (round($defH1Max * $factorScaleFont))*2; //134px
+
+
+//smaller font-sizes
+$s3: 12;
+$s3m: 12;
+
+$marginTopUnits:1;
+$marginBottomUnits:1;

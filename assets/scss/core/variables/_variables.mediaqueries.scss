@@ -1,0 +1,11 @@
+$mediaqueries: (
+    pantalla-320: 375px,
+    pantalla-xs: 480px,
+    pantalla-sm: 768px,
+    pantalla-md: 1200px,
+    pantalla-lg: 1680px
+);
+
+@function getBreakpoint($size) {
+    @return map-get-strict($mediaqueries, $size, "getBreakpoint");
+}

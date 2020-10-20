@@ -1,0 +1,6 @@
+//mismo calculo que el mixin multLineHeight de spacers pero expresado en una funcion
+
+@function getLines($value){
+    $result: ($defLineHeight * $value) * 1px;
+    @return $result;
+}

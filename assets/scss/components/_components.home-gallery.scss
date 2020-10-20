@@ -1,0 +1,120 @@
+.ba-c-hoGa {
+    $block:&;
+    margin-left: getGutter(halfgutter);
+    overflow:hidden; 
+
+    /* enable Flickity by default */
+    &:after {
+        content: 'flickity';
+        display: none; /* hide :after */
+    }
+
+    &:hover, &:focus {
+        border:0;
+        outline: none;
+    }
+
+
+    &__card {
+        margin-bottom: getLines(0.5);
+        margin-right:getGutter(halfgutter);
+        padding-bottom: getLines(0.5);
+        width: 85%;
+    }
+
+    &__card-picture {
+        position:relative;
+    }
+
+    &__card-image {
+        display:block;
+        height: getLines(5);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    &__card-tag {
+        @include os-bold;
+        background-color: getColor(white);
+        height: getLines(1);
+        padding: 0 5px;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 1;
+    }
+
+    &__content {
+        padding: 0 getGutter(halfgutter);
+    }
+
+    &__content-quote {
+        @include os-bold;
+        margin-top:getLines(1);
+        margin-bottom:getLines(1);
+    }
+
+    &__content-subQuote, &__content-author-date {
+        @include font-size($s3,$defLineHeight);
+        margin-bottom:getLines(1);
+    }
+
+    .flickity-button {
+        border:0;
+        border-radius:0;
+        height: getLines(1);
+        margin-top: getLines(0);
+        margin-right:getGutter(halfgutter);
+        width: getLines(1);
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-sm)){
+        margin-left: auto;
+        max-width: 80%;
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-md)){
+
+
+        &__card {
+            display:flex;
+            flex-direction: row;
+            margin-right: getGutter(gutter);
+            max-width: getBreakpoint(pantalla-sm);
+            padding:0;
+        }
+
+        &__card-image {
+            height: getLines(10);
+            width: getLines(11);
+        }
+    }
+}
+
+.ba-l-colorBg--gray-1 {
+    .ba-c-hoGa {
+        $block:&;
+        &__card, .flickity-button {
+            background-color: getColor(white);
+        }
+    }
+}
+
+.ba-l-colorBg--orange-1 {
+    .ba-c-hoGa {
+        $block:&;
+        &__card{
+            background-color: getColor(gray-1);
+        }
+
+        .flickity-button {
+            $block:&;
+            background-color: getColor(gray-2);
+
+            &-icon {
+                fill: getColor(orange-1);
+            }
+        }
+    }
+}

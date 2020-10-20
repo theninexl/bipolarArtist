@@ -1,0 +1,68 @@
+@mixin font-styles {
+    font-stretch: normal;  
+    -webkit-font-smoothing: antialiased;  
+    -moz-osx-font-smoothing: grayscale; 
+    //letter-spacing:1px;
+}
+
+@mixin font-weight-normal {
+    font-weight: $tipo-normal; 
+}
+
+@mixin font-weight-bold {
+    font-weight: $tipo-bold
+}
+
+@mixin font-weight-italic {
+    font-weight: $tipo-normal-italic; 
+    font-style: italic;
+}
+
+@mixin font-weight-italic-bold {
+    font-weight: $tipo-bold-italic;
+    font-style: italic;
+}
+
+
+@mixin os-normal {
+    font-family: $tipo-family;
+    @include font-weight-normal;
+    @include font-styles;
+}
+
+@mixin os-normal-italic {
+    font-family: $tipo-family;
+    @include font-weight-italic;
+    @include font-styles;
+}
+
+@mixin os-bold {
+    font-family: $tipo-family;
+    @include font-weight-bold;
+    @include font-styles;
+}
+
+@mixin os-bold-italic {
+    font-family: $tipo-family;
+    @include font-weight-italic-bold;
+    @include font-styles;
+}
+
+@mixin os-script {
+    font-family: 'knuckle';
+    font-weight: normal;
+    @include font-styles;
+}
+
+@mixin os-butler-medium {
+    font-family: 'butlermedium';
+    font-weight: normal;
+    @include font-styles;
+}
+
+@mixin os-butler-bold {
+    font-family: 'butlerblack';
+    font-weight: normal;
+    @include font-styles;
+}
+
