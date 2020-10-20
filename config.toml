@@ -1,7 +1,8 @@
 baseURL = ""
 languageCode = "es-es"
 title = "Bipolar Artist"
-relativeURLs = false
+relativeURLs = true
+uglyurls = true
 
 [markup]
   [markup.goldmark]

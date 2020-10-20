@@ -20,7 +20,7 @@
 {{- $flickity := resources.Get $flickityPath | resources.ExecuteAsTemplate $flickityPath . }}
 
 {{- $jsnoePath := "/js/noe.js" }}
-{{- $jsnoe := resources.Get $jsnoePath | resources.ExecuteAsTemplate $jsnoePath . }}
+{{- $jsnoe := resources.Get "/js/noe.js" | resources.Minify }}
 
 {{- $slotmachinePath := "/js/jquery-slotmachine/slotmachine.min.js" }}
 {{ $slotmachine := resources.Get $slotmachinePath | resources.ExecuteAsTemplate $slotmachinePath . }}
@@ -30,7 +30,7 @@
 
 
 {{- $bundle := slice $jquery $jqueryEasing $jqueryRotate $bootstrap $imagesLoaded $ekkoLightBox $flickity $slotmachine $jquerySlotmachine | resources.Concat "./js/bundle.js" | resources.Minify  }}
-<script src = '{{ $bundle.Permalink }}'></script>
+<script src = '.{{ $bundle.RelPermalink }}'></script>
 
 <!--<script src="{{ $jquery.Permalink }}"></script>
 <script src="{{ $jqueryEasing.Permalink }}"></script>
@@ -41,4 +41,4 @@
 <script src="{{ $flickity.Permalink }}"></script>
 <script src="{{ $slotmachine.Permalink }}"></script>
 <script src="{{ $jquerySlotmachine.Permalink }}"></script>-->
-<script src="{{ $jsnoe.Permalink }}"></script>
+<script src="{{ $jsnoe.RelPermalink }}"></script>
