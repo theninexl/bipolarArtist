@@ -2,4 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-10-14T18:48:21+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/creating-change/</loc>
+    <lastmod>2020-10-14T18:48:21+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/creating-emotions/</loc>
+    <lastmod>2020-10-14T18:48:21+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/embracing-change/</loc>
+    <lastmod>2020-10-14T18:48:21+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/embracing-emotions/</loc>
+    <lastmod>2020-10-14T18:48:21+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/inspiring-change/</loc>
+    <lastmod>2020-10-14T18:48:21+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/inspiring-emotions/</loc>
+    <lastmod>2020-10-14T18:48:21+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+  </url>
+  
 </urlset>

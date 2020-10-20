@@ -29,8 +29,8 @@
 {{ $jquerySlotmachine := resources.Get $jquerySlotmachinePath | resources.ExecuteAsTemplate $jquerySlotmachinePath . }}
 
 
-{{- $bundle := slice $jquery $jqueryEasing $jqueryRotate $bootstrap $imagesLoaded $ekkoLightBox $flickity $slotmachine $jquerySlotmachine | resources.Concat "/js/bundle.js" | resources.Minify  }}
-<script src = '{{ $bundle.Permalink }}'></script>
+{{- $bundle := slice $jquery $jqueryEasing $jqueryRotate $bootstrap $imagesLoaded $ekkoLightBox $flickity $slotmachine $jquerySlotmachine | resources.Concat "./js/bundle.js" | resources.Minify  }}
+<script src = '.{{ $bundle.Permalink }}'></script>
 
 <!--<script src="{{ $jquery.Permalink }}"></script>
 <script src="{{ $jqueryEasing.Permalink }}"></script>
