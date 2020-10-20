@@ -4,29 +4,29 @@
 
 @font-face {
     font-family: 'knuckle';
-    src: url('/fonts/dk_knucklebones.woff2') format('woff2'),
-       url('/fonts/dk_knucklebones.woff') format('woff'),
-       url('/fonts/dk_knucklebones.ttf') format('truetype');
+    src: url('./fonts/dk_knucklebones.woff2') format('woff2'),
+       url('./fonts/dk_knucklebones.woff') format('woff'),
+       url('./fonts/dk_knucklebones.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
 
 @font-face {
 font-family: 'bipo18';
-src: url('/fonts/bipo18.eot?63516000');
-src: url('/fonts/bipo18.eot?63516000#iefix') format('embedded-opentype'),
-     url('/fonts/bipo18.woff2?63516000') format('woff2'),
-     url('/fonts/bipo18.woff?63516000') format('woff'),
-     url('/fonts/bipo18.ttf?63516000') format('truetype'),
-     url('/fonts/bipo18.svg?63516000#bipo18') format('svg');
+src: url('./fonts/bipo18.eot?63516000');
+src: url('./fonts/bipo18.eot?63516000#iefix') format('embedded-opentype'),
+     url('./fonts/bipo18.woff2?63516000') format('woff2'),
+     url('./fonts/bipo18.woff?63516000') format('woff'),
+     url('./fonts/bipo18.ttf?63516000') format('truetype'),
+     url('./fonts/bipo18.svg?63516000#bipo18') format('svg');
 font-weight: normal;
 font-style: normal;
 }
 
 @font-face {
     font-family: 'butlermedium';
-    src: url('/fonts/butler_medium-webfont.woff2') format('woff2'),
-         url('/fonts/butler_medium-webfont.woff') format('woff');
+    src: url('./fonts/butler_medium-webfont.woff2') format('woff2'),
+         url('./fonts/butler_medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -34,8 +34,8 @@ font-style: normal;
 
 @font-face {
     font-family: 'butlerblack';
-    src: url('/fonts/butler_black-webfont.woff2') format('woff2'),
-         url('/fonts/butler_black-webfont.woff') format('woff');
+    src: url('./fonts/butler_black-webfont.woff2') format('woff2'),
+         url('./fonts/butler_black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
