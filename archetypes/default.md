@@ -2,7 +2,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 description: "Change this description"
 date: {{ .Date }}
-draft: true
+draft: false
 weight: 10
 ---
 
