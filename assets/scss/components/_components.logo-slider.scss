@@ -1,0 +1,51 @@
+.ba-c-logo-slider {
+    $block:&;
+
+    &__anim-wrapper {
+        display:flex;
+        overflow: hidden;        
+    }
+
+    &__hidden-wrapper {
+        display:none;
+    }
+
+    &__logos-box {
+        display:flex;
+        height: getLines(2);
+    }
+
+    &__item {
+        //border:1px solid black;   
+        display:inline-block;
+        height: 100%;
+        width: 100px;
+        margin-left: getGutter(halfgutter);
+
+        &.imgEncaja {
+            position:relative;
+            overflow:hidden;
+        }
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-sm)){
+
+        &__logos-box {
+            height: getLines(3);
+        }
+
+        &__item {
+            $anchopx: getBreakpoint(pantalla-sm)/12*2;
+            width:$anchopx;
+        }
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-md)){
+
+        &__item {
+            $anchopx: getBreakpoint(pantalla-md)/12*2;
+            margin-left: getGutter(gutter);
+            width:$anchopx;
+        }
+    }
+}

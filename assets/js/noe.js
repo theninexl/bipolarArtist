@@ -53,7 +53,7 @@
 			//console.log("entroenImgCover");
 
 			//aÃ±adir la clase cargando
-			container.addClass('is-loading');
+			//container.addClass('is-loading');
 
 
 			//sacamos el tamaño del container
@@ -63,8 +63,9 @@
 
 			//esperamos a que haya cargado la imagen y luego la encajamos
 			container.imagesLoaded().done(function(img){
+				//console.log("entro aquii")
 				imageAspect = $img.width() / $img.height();
-				container.removeClass('is-loading');
+				//container.removeClass('is-loading');
 				encaja();
 
 				
@@ -182,7 +183,7 @@
 						//imagen mas ancha que contenedor
 						//console.log("Encaja Ancho");						
 						$(this).find(settings.target).css({							
-							width: containerW/1.8,
+							width: containerW/1.2,
 							height: 'auto'
 						});
 						/*console.log("Imagenh: "+$(this).find(settings.target).height() );
@@ -201,53 +202,168 @@
 	}
 }( jQuery ));
 
+(function ( $ ) {
+	$.fn.noeCarrusel = function(options){
+		return this.each(function(){
+			
+			var $container = $(this),
+			currentIndex = 1,
+			defaults = {
+				target: '.ba-c-logo-slider__logos-box',
+				animWrapper: '.ba-c-logo-slider__anim-wrapper',
+				duration: 40000
+			},
+			settings = $.extend({},defaults,options),
+			$item = $container.find(settings.target),
+			$animWrapper = $container.find(settings.animWrapper),
+			$butPlay = $container.find('.control-button.play'),
+			$butPause = $container.find('.control-button.pause'),
+			time = settings.duration;
+			//$item.removeClass();
+
+			console.log("time al empezar:"+time);
+			//$butPlay.hide();
+			
+			function comprobarFoto(){
+				//console.log("entro en comprobar, vuelta:"+currentIndex);
+				boxes = $container.find(settings.target),
+				$animItems = $animWrapper.find(boxes),
+				elems = $animItems.length;
+
+				if (elems == 0){
+					cargarFoto();
+				}else if (elems <= 1){
+					clonarFoto();
+				}else if (elems > 1){
+					foto = $animWrapper.find('.ba-c-logo-slider__logos-box:first-child');
+					fotow = foto.width();
+					time = settings.duration;
+					timeUnit = fotow / time;
+					timeLeft = time;
+					animarFoto();
+				}
+			}
+
+			function clonarFoto(){
+				$item.clone().appendTo($animWrapper).addClass(settings.target+"-"+currentIndex);
+				$('.imgEncaja').imgEncaja();
+				currentIndex++
+				comprobarFoto();
+			}
+			
+			function cargarFoto(){
+				console.log("entro en cargar");
+				clonarFoto();
+				
+				$item.on('load', function(){ 	
+					//console.log("cargue con exito");
+					clonarFoto();	
+			
+				});
+
+				$item.on('error', function(){ 	
+					//console.log("error al cargar el contenedor");
+			
+				});
+			}
+
+			function animarFoto(){
+				fotow = foto.outerWidth();
+
+				$animWrapper.find('.ba-c-logo-slider__logos-box:first-child').stop().animate({
+                    marginLeft: -fotow //hide the first slide on the left
+				},{ 
+					duration: timeLeft, 
+					easing: "linear",
+					step: function(x) {
+						timeUnit = timeUnit * x
+						timePast = -Math.round(x * time / fotow);
+						timeLeft = time - timePast;	
+											
+					},
+					done: function () {
+						//once completely hidden, move this slide next to the last slide
+						$(this).appendTo($(this).parent()).css({marginLeft: "auto"});
+						timeLeft = settings.duration;
+						animarFoto();
+						                  
+					}
+				});					
+			}
+
+
+			/*$butPlay.on("click",function(e){
+				//console.log("play");
+				animarFoto();
+				$(this).hide();
+				$butPause.show();
+			});
+
+			$butPause.on("click",function(e){
+				//console.log("pause");
+				prima = $animWrapper.find('img:first-child');
+				prima.stop();
+				//console.log("time:"+timeLeft);
+				$(this).hide();
+				$butPlay.show();
+			});*/
+
+			comprobarFoto();
+		});
+	}
+}( jQuery ));
+
 function adjustVideo(){
 	//console.log("entro en adjust video");
-	var $container = $('.ba-c-video-reel__video-wrapper'),
+	var $container = $('.ba-c-video-reel'),
 	imageAspect = 1/1,
 	containerH = 0, containerW = 0,
 	containerAspect = containerW/containerH,
 	$video = $('.video-wrapper__sources'),
-	videoimg = $('.video-wrapper img'),
-	$targetImg = $('.video-wrapper img'),
+	$videoimg = $('.ba-c-video-reel__video-wrapper img'),
+	$targetImg = $('.ba-c-video-reel__video-wrapper img'),
 	videoAspect = 0,
 	vH = 0, vW = 0;
 
 	
 
 	//esperamos a que haya cargado la imagen y luego la encajamos
-	$video.imagesLoaded().done(function(videoimg){
-		vH = $targetImg.height();
-		console.log(vH+" ha cargado");
+	$container.imagesLoaded().done(function(){
+		//console.log("la imagen ha cargado");
 		encaja();		
 	});
 
 	function encaja(){
+		//console.log("encaja");
+		containerH = $container.height(),
+		containerW = $container.width(),
+		containerAspect = containerW/containerH,
 		vH = $targetImg.height(),
 		vW = $targetImg.width(),
 		videoAspect = vW/vH;
-		containerH = $container.outerHeight(),
-		containerW = $container.outerWidth(),
-		containerAspect = containerW/containerH;
-
-		console.log("vCh"+containerH+" / vCw:"+containerW);
-		console.log("vVh"+vH+" / vVw:"+vW);
+		
+		
+		
+		/*console.log("container H:"+containerH+" / container W:"+containerW);		
+		console.log("vVh:"+vH+" / vVw:"+vW);
 		console.log("containerAspect:"+containerAspect);
-		console.log("videoaspect"+videoAspect);
+		console.log("videoaspect"+videoAspect);*/
 
 		if (containerAspect < videoAspect) {
 			//video más ancho que contenedor	
-			console.log("video más ancho que contenedor");
+		//	console.log("video más ancho que contenedor");
 			$targetImg.css({
 				"height":"100%",
 				"width":"auto"
-			});
-			vW = $targetImg.width();
-			console.log("nueva vVw:"+vW);
+			});	
 			$video.css({
-				"height":"100%",
-				"width":"auto",
-				"margin-left":(containerW - vW)/2,
+				"height":containerH,
+				"width":"auto"
+			});
+			videoW = $video.width();
+			//console.log("nueva videoW:"+videoW);
+			$video.css({
+				"margin-left": -(videoW - containerW)/2,
 				"margin-top":0,
 				"margin-bottom":"9999px"
 			});
@@ -255,17 +371,19 @@ function adjustVideo(){
 	
 		}else {		
 			//video más alto que contenedor
-			console.log("video más alto que contenedor");
+			//console.log("video más alto que contenedor");
 			$targetImg.css({
 				"height":"auto",
 				"width":"100%"
 			});
-			vH = $targetImg.height();
-			console.log("nueva vVH:"+vH);
 			$video.css({
 				"height":"auto",
-				"width":"100%",
-				"margin-top":(containerH - vH)/2,
+				"width":containerW
+			});
+			videoH = $video.height();
+		//	console.log("nueva videoH:"+videoH);
+			$video.css({
+				"margin-top":-(videoH - containerH)/2,
 				"margin-left":0,
 				"margin-bottom":"9999px"
 			});
@@ -403,7 +521,7 @@ $(document).ready(function(){
 	
 
 	function resize(){
-		console.log("resize");
+		//console.log("resize");
 		$('img').propimg();
 		$('.imgCover').imgCover();
 		$('.ba-l-full-bg__img').imgCover();
@@ -422,10 +540,10 @@ $(document).ready(function(){
 		if ($('.ba-c-video-reel')){
 			//console.log("entro en sheet");
 			//ficha de pelicula, así que llamamos al ajuste del video
-			var figure = $(".ba-c-video-reel").hover( hoverVideo, hideVideo );	
+			//var figure = $(".ba-c-video-reel").hover( hoverVideo, hideVideo );	
 			adjustVideo();
 	
-			function hoverVideo(e) { 
+			/*function hoverVideo(e) { 
 				e.preventDefault();
 				//console.log("hovervideo"); 
 				$('video', this).get(0).play(); 
@@ -435,7 +553,7 @@ $(document).ready(function(){
 				e.preventDefault();
 				//console.log("hidevideo");
 				$('video', this).get(0).pause(); 
-			}
+			}*/
 		}
 
 		if($('.ba-c-hoGa')){
@@ -445,9 +563,14 @@ $(document).ready(function(){
 				pageDots: false,
 				cellAlign: 'left',
 				contain: true,
-				autoPlay: false,
+				autoPlay: 5000,
+				pauseAutoPlayOnHover: false,
 				wrapAround: true
 			});
+		}
+
+		if($('.ba-c-logo-slider')){
+			$('.ba-c-logo-slider').noeCarrusel();
 		}
 	}
 	

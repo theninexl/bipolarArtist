@@ -20,5 +20,10 @@
         position: absolute;
         width: 100%;
         z-index: 1;
+
+        a, a:visited, a:hover {
+            color:getColor(white);
+            text-decoration:none;
+        }
     }
 }

@@ -1,0 +1,16 @@
+.ba-l-top-home-section {
+    $block:&;
+    height: 70vh;
+
+    &__content {
+        padding-top: getLines(2);
+    }
+
+    @media screen and (min-width: getBreakpoint(pantalla-md)){
+        height: 80vh;
+
+        &__content {
+            padding-top: getLines(7);
+        }
+    }
+}

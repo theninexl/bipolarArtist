@@ -28,6 +28,9 @@
 {{- $jquerySlotmachinePath := "/js/jquery-slotmachine/jquery.slotmachine.min.js" }}
 {{ $jquerySlotmachine := resources.Get $jquerySlotmachinePath | resources.ExecuteAsTemplate $jquerySlotmachinePath . }}
 
+{{- $fancyboxPath := "/js/fancybox/jquery.fancybox.min.js" }}
+{{ $fancybox := resources.Get $fancyboxPath }}
+
 
 {{- $bundle := slice $jquery $jqueryEasing $jqueryRotate $bootstrap $imagesLoaded $ekkoLightBox $flickity $slotmachine $jquerySlotmachine | resources.Concat "./js/bundle.js" | resources.Minify  }}
 <script src = '.{{ $bundle.RelPermalink }}'></script>
@@ -41,4 +44,5 @@
 <script src="{{ $flickity.Permalink }}"></script>
 <script src="{{ $slotmachine.Permalink }}"></script>
 <script src="{{ $jquerySlotmachine.Permalink }}"></script>-->
+<script src="{{ $fancybox.RelPermalink }}"></script>
 <script src="{{ $jsnoe.RelPermalink }}"></script>

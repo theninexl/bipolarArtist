@@ -13,10 +13,12 @@
     "copy:slotmachine": "rm -rf assets/js/jquery-slotmachine/ && mkdir assets/js/jquery-slotmachine && find node_modules/jquery-slotmachine/dist -name 'slotmachine.min.js' -exec cp -prv '{}' 'assets/js/jquery-slotmachine' ';'",
     "copy:jquery-slotmachine": "find node_modules/jquery-slotmachine/dist -name 'jquery.slotmachine.min.js' -exec cp -prv '{}' 'assets/js/jquery-slotmachine' ';'",
     "copy:flickity": "rm -rf assets/js/flickity/ && mkdir assets/js/flickity && find node_modules/flickity/dist -name 'flickity.pkgd.min.js' -exec cp -prv '{}' 'assets/js/flickity' ';'",
-    "copy:allscripts": "npm run copy:jquery && npm run copy:jquery.easing && npm run copy:imagesloaded && npm run copy:ekko && npm run copy:slotmachine && npm run copy:css.slotmachine && npm run copy:jquery-slotmachine && npm run copy:flickity",
+    "copy:fancybox": "rm -rf assets/js/fancybox/ && mkdir assets/js/fancybox && find node_modules/@fancyapps/fancybox/dist -name 'jquery.fancybox.min.js' -exec cp -prv '{}' 'assets/js/fancybox' ';'",
+    "copy:css.fancybox": "rm -rf assets/css/fancybox/ && mkdir assets/css/fancybox && find node_modules/@fancyapps/fancybox/dist -name 'jquery.fancybox.min.css' -exec cp -prv '{}' 'assets/css/fancybox' ';'",
+    "copy:allscripts": "npm run copy:jquery && npm run copy:jquery.easing && npm run copy:imagesloaded && npm run copy:ekko && npm run copy:slotmachine && npm run copy:css.slotmachine && npm run copy:jquery-slotmachine && npm run copy:flickity && npm run copy:fancybox && npm run copy:css.fancybox",
     "build:css": "./bin/build-css",
     "watch:css": "./bin/watch-css",
-    "documentation-mode": "npm run copy:allscripts && npm run build:css && DOCUMENTATION_MODE=true hugo server -D"
+    "documentation-mode": "npm run copy:allscripts && npm run build:css && DOCUMENTATION_MODE=true hugo server -D --bind 192.168.1.50"
   },
   "repository": {
     "type": "git",
@@ -35,6 +37,7 @@
   },
   "homepage": "https://github.com/theninexl/bipolarArtist#readme",
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "bootstrap": "^4.5.2",
     "ekko-lightbox": "^5.3.0",
     "flickity": "^2.2.1",

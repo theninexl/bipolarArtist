@@ -1,15 +1,15 @@
 
 {{ define "main" }}
     <div class="ba-l-two-four-grid">
-        <div id="section-1" class="full-bleed ba-l-colorBg--yellow-1">
-            <div class="ba-l-container ba-l-container--big-top-padding">
-                <h1><span class="max-size serif">Going digital, together.</span></h1>
+        <div id="section-1" class="full-bleed ba-l-colorBg--yellow-1 ba-l-top-home-section">
+            <div class="ba-l-container ba-l-top-home-section__content">
+                <h1><span class="overmax-size serif">Going digital, together.</span></h1>
                 <div class="ba-l-cols-md-2">
-                    <div class="ba-l-cols__col ba-u-spacer-mb-double">
-                        <p>We’re a creative agency specialised in crafting digital experiences that share your brand values. </p>
+                    <div class="ba-l-cols__col">
+                        <p>We’re a creative agency specialised in crafting digital experiences that share your brand values.</p>
                         <p class="ba-u-text-color--purple-1">Madrid / London / Dubai / Barcelona / Porto</p>
                     </div>
-                    <div class="ba-l-cols__col ba-u-spacer-mb-double"></div>
+                    <div class="ba-l-cols__col "></div>
                 </div>
             </div>
         </div>
@@ -17,15 +17,22 @@
             <div class="ba-c-video-reel">
                 <div class="ba-c-video-reel__on-top">
                     <div class="ba-l-container">
-                        <p>showreel</p>
+                        <p><a data-fancybox href="#baLongShowReel">Play showreel</a></p>
                     </div>
                 </div>
+                <video controls id="baLongShowReel" style="display:none;">
+                    <source src="https://giant.gfycat.com/VerifiableTerrificHind.mp4" type="video/mp4">
+                    <source src="https://giant.gfycat.com/VerifiableTerrificHind.webm" type="video/webm">
+                    Your browser doesn't support HTML5 video tag.
+                </video>
+
+
                 <div class="ba-c-video-reel__video-wrapper">
-                    <video class="video-wrapper__sources" muted loop preload="none" poster="https://img.youtube.com/vi/nZcejtAwxz4/maxresdefault.jpg">
+                    <video class="video-wrapper__sources" muted loop playsinline autoplay preload="none" poster="https://img.youtube.com/vi/nZcejtAwxz4/maxresdefault.jpg">
                         <source src="https://giant.gfycat.com/VerifiableTerrificHind.mp4" type="video/mp4">
                         <source src="https://giant.gfycat.com/VerifiableTerrificHind.webm" type="video/webm">
-                        <img src="https://img.youtube.com/vi/nZcejtAwxz4/maxresdefault.jpg">
                     </video>
+                    <img src="https://img.youtube.com/vi/nZcejtAwxz4/maxresdefault.jpg">
                 </div>
             </div>
         </div>
@@ -35,7 +42,56 @@
                 <p>We’re a friendly bunch who like to get to know the people we work with.<br/>
                     That means over time our clients become amigos:</p>
             </div>
-            <div class="ba-c-logos-grid">
+            <div class="ba-c-logo-slider">
+                <div class="ba-c-logo-slider__anim-wrapper"></div>
+                <div class="ba-c-logo-slider__hidden-wrapper">
+                    <div class="ba-c-logo-slider__logos-box">
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-Kearney.png" alt="Kearney Logo">
+                        </div>
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-Virgin.png" alt="Virgin Logo">
+                        </div>
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-giffgaff.png" alt="giffgaff Logo">
+                        </div>
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-sky.png" alt="Sky Logo">
+                        </div>
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-proactiv.png" alt="Proactiv Logo">
+                        </div>
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-yap.png" alt="YAP Logo">
+                        </div>
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-me.png" alt="Me by Melia Logo">
+                        </div>
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-barclays.png" alt="Barclays Logo">
+                        </div>
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-bumble.png" alt="Bumble Logo">
+                        </div>
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-bp.png" alt="BP Logo">
+                        </div>
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-santander.png" alt="Santander Logo">
+                        </div>
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-schweppes.png" alt="Schweppes Logo">
+                        </div>
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-makro.png" alt="Makro Logo">
+                        </div>
+                        <div class="ba-c-logo-slider__item imgEncaja">
+                            <img src="/images/imgContent/client-logo-bw-wizink.png" alt="WiZink Logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="ba-c-logos-grid">
                 <div class="ba-c-logos-grid__item imgEncaja">
                     <img src="/images/imgContent/client-logo-bw-Kearney.png" alt="Kearney Logo">
                 </div>
@@ -78,7 +134,7 @@
                 <div class="ba-c-logos-grid__item imgEncaja">
                     <img src="/images/imgContent/client-logo-bw-wizink.png" alt="WiZink Logo">
                 </div>
-            </div>
+            </div>-->
             <div class="ba-c-hoGa carousel ba-u-spacer-mt-double ba-u-spacer-mb-huge">
                 <div class="ba-c-hoGa__card carousel-cell">
                     <div class="ba-c-hoGa__content">
@@ -134,7 +190,7 @@
                 <div class="ba-l-cols-md-2">
                     <div class="ba-l-cols__col ba-u-spacer-mb-double">
                         <p>We’re passionate about what we do and are always happy to talk you through it, but we’d rather let our work speak for itself.</p>
-                        <p><a href="/creating-change" class="ba-u-text-bold ba-u-link-arrow">View stories</a></p>
+                        <p><a href="/creating-change.html" class="ba-u-text-bold ba-u-link-arrow">View stories</a></p>
                     </div>
                     <div class="ba-l-cols__col ba-u-spacer-mb-double"></div>
                 </div>

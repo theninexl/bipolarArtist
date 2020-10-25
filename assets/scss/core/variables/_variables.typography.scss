@@ -26,6 +26,7 @@ $defH3: round($defFontSize * $factorScaleFont ); //21px
 $defH2: round($defH3 * $factorScaleFont ); //28px
 $defH1: round($defH2 * $factorScaleFont ); //37px
 $defH1Max: ceil($defH1 * $factorScaleFont ); //50px
+$defH1OverMax: round($defH1Max * $factorScaleFont ); //66px
 $defH1Huge: (round($defH1Max * $factorScaleFont))*2; //134px
 
 $defH4Mob: $defFontSizeMob; //16px
@@ -33,6 +34,7 @@ $defH3Mob: round($defFontSizeMob * $factorScaleFontMob ); //21
 $defH2Mob: round($defH3Mob * $factorScaleFontMob ); //28
 $defH1Mob: round($defH2Mob * $factorScaleFontMob ); //37
 $defH1MobMax: ceil($defH1 * $factorScaleFont ); //50px
+$defH1MobOverMax: round($defH1MobMax * $factorScaleFont ); //66px
 $defH1MobHuge: (round($defH1Max * $factorScaleFont))*2; //134px
 
 
