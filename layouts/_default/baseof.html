@@ -9,23 +9,33 @@
         {{ $bootstrap := resources.Get "css/bootstrap/bootstrap.min.css" }}
         {{ $slotmachine := resources.Get "css/jquery-slotmachine/jquery.slotmachine.min.css" }}
         {{ $fancyboxcss := resources.Get "css/fancybox/jquery.fancybox.min.css" }}
-        <link rel="stylesheet" href="{{ $bootstrap.RelPermalink }}">
-        <link rel="stylesheet" href="{{ $slotmachine.RelPermalink }}">
-        <link rel="stylesheet" href="{{ $fancyboxcss.RelPermalink }}">
-        <link rel="stylesheet" href="/css/styles.css">
+        {{ $style := resources.Get "css/styles.css" | resources.Minify }}
+        {{ $CSS := resources.Match "css/**.css" | resources.Concat "css/allstyles.css" }}
+        <link rel="stylesheet" href="{{ $CSS.RelPermalink }}">
+        <meta property="og:image" content="/images/BA-og-image.jpg">
+        <meta property="og:site_name" content="Bipolar Artist. Going Digital, together">
+        <meta property="og:title" content="Bipolar Artist. Going Digital, together">
+		<meta property="og:url" content="http://bipolar-artist.com/">
+        <meta property="og:description" content="{{ .Description }}">
+        <meta property="og:locale" content="es_ES">
+        <meta property="og:type" content="website">
+        <meta name="keywords" content="Bipolar Artist, Bipolar, Diseño, Design, Madrid, Barcelona, London, Dubai, Digital Design, Diseño digital, Research, strategy, UX, user experience, user centric, user, content, motion, development, html, Investigacion, estrategia, experiencia de usuario, animacion, desarrollo">
+        <meta name="twitter:description" content="{{ .Description }}">
+        <meta name="twitter:image" content="/images/BA-og-image.jpg">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-        <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36487805-2"></script>
-			<script>
-			  window.dataLayer = window.dataLayer || [];
-			  function gtag(){dataLayer.push(arguments);}
-			  gtag('js', new Date());
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36487805-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-			  gtag('config', 'UA-36487805-2');
-		</script>-->
+            gtag('config', 'UA-36487805-2');
+        </script>
 
     </head>
     <body>

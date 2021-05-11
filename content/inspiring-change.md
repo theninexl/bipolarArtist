@@ -1,6 +1,6 @@
 ---
-title: "Creating Change"
-description: "Change this description"
+title: "Bipolar Artist - Inspiring Change"
+description: "Change can start with an idea, a sketch, a conversation or a brainstorm in a coffee shop. We don’t know how it happens we’re just experts at making sure it does."
 date: 2020-10-14T18:48:21+02:00
 draft: false
 weight: 10
@@ -88,6 +88,7 @@ weight: 10
 
 
 <section class="main-area-wrapper">
+<a name="yallacompare"></a>
     <div class="cont-video v2 green">
         <div class="container">
             <div class="row bg">
@@ -116,6 +117,7 @@ weight: 10
 </section>
 
 <section class="main-area-wrapper">
+<a name="virgin"></a>
     <div class="one-cont-one-cont-1 borderless">
         <div class="container">
             <div class="row content">
@@ -171,7 +173,7 @@ weight: 10
                 <div class="col-xs-8 col-md-3 col-md-offset-3 first">
                     <div class="tag">Contact Us</div>
                     <p>If you want to say adios to the status quo and boost your business, then give us a shout.</p>
-                    <p class="center"><a class="noted" href="contact.php">Say hi</a></p>
+                    <p class="center"><a class="noted" href="/contact.html">Say hi</a></p>
                 </div>
                 <div class="col-xs-4 col-md-3 second" style="background-image:url(/images/imgContent/graydrops-texture-1.png)">
                     <div class="col-xs-12 col-md-8 col-md-offset-2">

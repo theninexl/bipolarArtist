@@ -1,6 +1,6 @@
 ---
-title: "Creating Change"
-description: "Change this description"
+title: "Bipolar Artist - Creating Change"
+description: "Creating change is something that’s always at the forefront of our minds, whether it be helping a client rebrand from scratch or encouraging team members to stretch themselves with a new language."
 date: 2020-10-14T18:48:21+02:00
 draft: false
 weight: 10
@@ -37,6 +37,7 @@ weight: 10
     </div>
 </section>
 <section class="main-area-wrapper">
+<a name="proactiv"></a>
     <div class="cont-video v2 green">
         <div class="container">
             <div class="row bg">
@@ -181,9 +182,9 @@ helped organise Spanish lessons in London.</p>
                 <div class="col-xs-8 col-md-3 col-md-offset-3 first">
                     <div class="tag">Contact Us</div>
                     <p>If you want to say adios to the status quo and boost your business, then give us a shout.</p>
-                    <p class="center"><a class="noted" href="contact.php">Say hi</a></p>
+                    <p class="center"><a class="noted" href="/contact.html">Say hi</a></p>
                 </div>
-                <div class="col-xs-4 col-md-3 second" style="background-image:url(assets/imgContent/graydrops-texture-1.png)">
+                <div class="col-xs-4 col-md-3 second" style="background-image:url(/images/imgContent/graydrops-texture-1.png)">
                     <div class="col-xs-12 col-md-8 col-md-offset-2">
                         <img src="/images/imgContent/icon-contact.png" class="img-responsive">
                     </div>								

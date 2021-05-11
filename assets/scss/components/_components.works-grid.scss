@@ -5,7 +5,7 @@
     flex-wrap: wrap;
 
     &__item {
-        flex-basis: 50%;
+        flex-basis: 100%;
     }
 
     &__item-wrapper {
@@ -13,6 +13,10 @@
         height: getLines(6);
         overflow: hidden;
         position:relative;
+
+        &.no-link {
+            cursor:initial;
+        }
     }
 
     &__item-tag {
@@ -26,9 +30,19 @@
         z-index: 1;
     }
 
-    &__item-image {
+    &__item-image, &__item-video {
         display: block;
         height:100%;
+    }
+
+    &__item-video iframe, &__item-video video {
+        background-color: getColor(black);
+        height: getLines(6);
+        width:100%;
+    }
+
+    &__item-video video {
+        object-fit: fill;
     }
 
     @media screen and (min-width: getBreakpoint(pantalla-sm)){
@@ -39,8 +53,12 @@
 
     @media screen and (min-width: getBreakpoint(pantalla-md)){
 
-        &__item-wrapper {
-            height: getLines(10);
+        &__item-wrapper, &__item-video iframe, &__item-video video {
+            height: getLines(7);
+        }
+
+        &__item-tag {
+            padding: 0 15px;
         }
     }
 }

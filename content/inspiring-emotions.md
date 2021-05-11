@@ -1,6 +1,6 @@
 ---
-title: "Creating Change"
-description: "Change this description"
+title: "Bipolar Artist - Inspiring Emotions"
+description: "We pour everything into our designs and want to inspire a range of emotions in people so they don’t just go “oh” but “aw” as well."
 date: 2020-10-14T18:48:21+02:00
 draft: false
 weight: 10
@@ -122,6 +122,7 @@ weight: 10
 			
 
 <section class="main-area-wrapper">
+<a name="afterbrunch"></a>
     <div class="one-cont-one-cont-1 borderless">
         <div class="container">
             <div class="row content">
@@ -198,9 +199,9 @@ weight: 10
                 <div class="col-xs-8 col-md-3 col-md-offset-3 first">
                     <div class="tag">Contact Us</div>
                     <p>If you want to say adios to the status quo and boost your business, then give us a shout.</p>
-                    <p class="center"><a class="noted" href="contact.php">Say hi</a></p>
+                    <p class="center"><a class="noted" href="/contact.html">Say hi</a></p>
                 </div>
-                <div class="col-xs-4 col-md-3 second" style="background-image:url(assets/imgContent/graydrops-texture-1.png)">
+                <div class="col-xs-4 col-md-3 second" style="background-image:url(/images/imgContent/graydrops-texture-1.png)">
                     <div class="col-xs-12 col-md-8 col-md-offset-2">
                         <img src="/images/imgContent/icon-contact.png" class="img-responsive">
                     </div>								

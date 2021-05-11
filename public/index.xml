@@ -8,17 +8,17 @@
     <language>es-es</language>
     <lastBuildDate>Wed, 14 Oct 2020 18:48:21 +0200</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Creating Change</title>
+      <title>Bipolar Artist - Creating Change</title>
       <link>/creating-change.html</link>
       <pubDate>Wed, 14 Oct 2020 18:48:21 +0200</pubDate>
       
       <guid>/creating-change.html</guid>
       <description>Creating Change      Creating change is something that’s always at the forefront of our minds, whether it be helping a client rebrand from scratch or encouraging team members to stretch themselves with a new language.
-          Client time  	  A fresh image Giving a brand a funky fresh new image is always exciting.</description>
+           Client time  	  A fresh image Giving a brand a funky fresh new image is always exciting.</description>
     </item>
     
     <item>
-      <title>Creating Change</title>
+      <title>Bipolar Artist - Creating Emotions</title>
       <link>/creating-emotions.html</link>
       <pubDate>Wed, 14 Oct 2020 18:48:21 +0200</pubDate>
       
@@ -28,27 +28,27 @@
     </item>
     
     <item>
-      <title>Creating Change</title>
+      <title>Bipolar Artist - Embracing Change</title>
       <link>/embracing-change.html</link>
       <pubDate>Wed, 14 Oct 2020 18:48:21 +0200</pubDate>
       
       <guid>/embracing-change.html</guid>
       <description>Embracing Change       The early days were all about print projects like brochures, flyers and posters. Then the world changed and now our days whizz by working on websites, digital designs and other online adventures.
-          Client time	Excitement control We don’t make changes for the sake of it so we carried out a complete SEO audit of the Sky Spain site before proposing any amendments.</description>
+           Client time	Excitement control We don’t make changes for the sake of it so we carried out a complete SEO audit of the Sky Spain site before proposing any amendments.</description>
     </item>
     
     <item>
-      <title>Creating Change</title>
+      <title>Bipolar Artist - Embracing Emotions</title>
       <link>/embracing-emotions.html</link>
       <pubDate>Wed, 14 Oct 2020 18:48:21 +0200</pubDate>
       
       <guid>/embracing-emotions.html</guid>
-      <description>Embracing Change       The early days were all about print projects like brochures, flyers and posters. Then the world changed and now our days whizz by working on websites, digital designs and other online adventures.
-          Client time	Excitement control We don’t make changes for the sake of it so we carried out a complete SEO audit of the Sky Spain site before proposing any amendments.</description>
+      <description>Embracing Emotions       It all started in our childhood. Our families shared their passions with us and they stuck. They lit a wick and ignited a creative flame.
+        ME Taking it to the rooftop  A top collection of luxury hotels wanted to boost its rooftop bar. Fires ignited in our belly. We couldn&#39;t resist joining forces with ME by Melia.</description>
     </item>
     
     <item>
-      <title>Creating Change</title>
+      <title>Bipolar Artist - Inspiring Change</title>
       <link>/inspiring-change.html</link>
       <pubDate>Wed, 14 Oct 2020 18:48:21 +0200</pubDate>
       
@@ -58,12 +58,24 @@
     </item>
     
     <item>
-      <title>Creating Change</title>
+      <title>Bipolar Artist - Inspiring Emotions</title>
       <link>/inspiring-emotions.html</link>
       <pubDate>Wed, 14 Oct 2020 18:48:21 +0200</pubDate>
       
       <guid>/inspiring-emotions.html</guid>
       <description>Inspiring Emotions      We pour everything into our designs and want to inspire a range of emotions in people so they don’t just go “oh” but “aw” as well.  --          Motion Animating folks with animation We love a challenge. Like getting customers excited about a client’s new financial service in a fun and friendly way.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/contact.html</link>
+      <pubDate>Wed, 14 Oct 2020 18:48:21 +0200</pubDate>
+      
+      <guid>/contact.html</guid>
+      <description>If you want to listen to our beautiful and inspiring voices:
+(+34) 916 229 568
+ Contact Us   &amp;nbsp;Send Message  	 Information was sent. Thanks for your message
+   This is where we&#39;re based       $(&#39;#tmContact&#39;).submit(function(event){ event.preventDefault(); // to prevent default page reloading var dataString = $(this).serialize(); // to get the form data $.ajax({ type: &#34;POST&#34;, url: &#34;/php/sendmail.php&#34;, data: dataString, success: function(data){ $(&#39;#contact form&#39;)[0].</description>
     </item>
     
   </channel>

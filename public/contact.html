@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es-es">
+    <head>
+        <meta charset="utf-8">
+        <title>Contact</title>
+        <meta name="description" content="Change this description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        
+        
+        
+        
+        
+        <link rel="stylesheet" href="./css/allstyles.css">
+        <meta property="og:image" content="/images/BA-og-image.jpg">
+        <meta property="og:site_name" content="Bipolar Artist. Going Digital, together">
+        <meta property="og:title" content="Bipolar Artist. Going Digital, together">
+		<meta property="og:url" content="http://bipolar-artist.com/">
+        <meta property="og:description" content="Change this description">
+        <meta property="og:locale" content="es_ES">
+        <meta property="og:type" content="website">
+        <meta name="keywords" content="Bipolar Artist, Bipolar, Diseño, Design, Madrid, Barcelona, London, Dubai, Digital Design, Diseño digital, Research, strategy, UX, user experience, user centric, user, content, motion, development, html, Investigacion, estrategia, experiencia de usuario, animacion, desarrollo">
+        <meta name="twitter:description" content="Change this description">
+        <meta name="twitter:image" content="/images/BA-og-image.jpg">
+        
+		
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36487805-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-36487805-2');
+        </script>
+
+    </head>
+    <body>
+        <div class="page-template-full">
+            
+
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="./" class="navbar-brand"><img src="./images/BA-logo.png" alt="Bipolar Artist"></a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar" aria-expanded="false" aria-controls="navbar">
+                <span class="bar">Abrir menu</span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="drop-nav">
+                <li class="dropdown noedrop col-md-3">
+                    <a class="dropdown-toggle nav-selected nav-path-selected" data-toggle="dropdown" aria-expanded="false" aria-controls="drop1" role="button">Creating</a>
+                    <ul class="dropdown-menu">
+                        <li class=""><a href="./creating-change.html" class="">Change</a></li>
+                        <li class=""><a href="./creating-emotions.html" class="">Emotions</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown noedrop col-md-3">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button">Embracing</a>
+                    <ul class="dropdown-menu">
+                        <li class=""><a href="./embracing-change.html" class="">Change</a></li>
+                        <li class=""><a href="./embracing-emotions.html" class="">Emotions</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown noedrop col-md-3">
+                    <a class="dropdown-toggle nav-selected nav-path-selected" data-toggle="dropdown" aria-expanded="false" aria-controls="drop1" role="button">Inspiring</a>
+                    <ul class="dropdown-menu">
+                        <li class=""><a href="./inspiring-change.html" class="">Change</a></li>
+                        <li class=""><a href="./inspiring-emotions.html" class="">Emotions</a></li>
+                    </ul>
+                </li>							
+            </ul>
+            <div class="buttons">
+                <a class="btn hsized small solid darkgrey" href="./contact.html" role="button">Contact</a>
+                <p class="copy"><strong>Bipolar Artist 2007-2021</strong> &reg; All Rights Reserved</p>												
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+            <main id="main-content">
+                
+    <section class="main-area-wrapper">
+    <div class="contact-section">
+        <div class="container">
+            <div class="row content">
+                <p class="center" style="margin-top:90px;">If you want to listen to our <br>beautiful and inspiring voices:</p>
+                <p class="center"><strong>(+34) 916 229 568</strong></p>
+            </div>
+            <div class="row content">
+                <div class="col-xs-12 col-md-6 col-md-offset-3 first">
+                    <div class="tag">Contact Us</div>
+                    <form id="tmContact" name="tmContact" action="./php/sendmail.php" method="POST" class="">
+                        <div class="cell comments form-group">
+                            <textarea type="text" id="comments" name="comments" placeholder="Write your message here..."></textarea>
+                        </div>
+                        <div class="cell data">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name" name="name" id="name">
+                                <input type="email" class="form-control" placeholder="E-mail" name="email" id="email">
+                                <input type="tel" class="form-control submit" placeholder="Phone" name="phone" id="phone">
+                                <input type="hidden" value="info@bipolar-artist.com" name="direccion">
+                                <button type="submit" class="submit">&nbsp;Send Message<i class="icon-right-open"></i></button>
+                            </div>
+                        </div>						
+                    </form>
+                    <div class="answer" style="display:none;"><p>Information was sent. Thanks for your message</p></div>
+                </div>
+            </div>
+            <div class="row content">
+                <div class="col-xs-12 col-md-6 col-md-offset-3 second">
+                    <h1 class="center">This is where we're based</h3>
+                    <p><img src="./images/bipo-map.png" style="width:100%; height:auto;"></p>								
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+
+	$('#tmContact').submit(function(event){
+  	  	event.preventDefault(); // to prevent default page reloading
+		var dataString = $(this).serialize(); // to get the form data
+		
+		$.ajax({
+			type: "POST",
+			url: "/php/sendmail.php",
+			data: dataString,
+			success: function(data){
+			    $('#contact form')[0].reset(); // to reset form data
+			    setTimeout(function () {
+				$('.answer').css('display','block');
+				$('answer p').append(''<script>fbq('track', 'Subscribe');<"+ "/script>");
+			     }, 500);
+			}
+		}).done(function(data){
+			
+		});
+  	  	
+  	  });
+  
+</script><blockquote>
+</blockquote>
+
+
+            </main>
+
+            
+    <footer>
+    <nav class="foot-nav" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <ul>
+                        <li class="dropdown col-md-3">
+                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button">Creating</a>
+                            <ul class="dropdown-menu">
+                                <li class=""><a href="creating-change.html" class="">Change</a></li>
+                                <li class=""><a href="creating-emotions.html" class="">Emotions</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown col-md-3">
+                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button">Embracing</a>
+                            <ul class="dropdown-menu">
+                                <li class=""><a href="embracing-change.html" class="">Change</a></li>
+                                <li class=""><a href="embracing-emotions.html" class="">Emotions</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown col-md-3">
+                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button">Inspiring</a>
+                            <ul class="dropdown-menu">
+                                <li class=""><a href="inspiring-change.html" class="">Change</a></li>
+                                <li class=""><a href="inspiring-emotions.html" class="">Emotions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>					
+        </div>				
+    </nav>
+
+    <div class="container foot-info">
+        <div class="row">
+            <div class="col-md-6 leftside">
+                <p class="center title"><strong>Bipolar Artist HQ</strong></p>
+                <div class="col-md-6 data">
+                    <p class="center">Fernando Garrido, 9<br>28015 Madrid</p>
+                </div>
+                <div class="col-md-6 data">
+                    <p class="center">+34 916 22 95 68<br><a href="https://www.google.es/maps/place/Bipolar+Artist/@40.4334117,-3.7117908,17z/data=!3m1!4b1!4m5!3m4!1s0x12a4988d14c346d9:0xe6fc017f4813e57c!8m2!3d40.4334076!4d-3.7096021" target="_blank">View on map</a></p>
+                </div>
+            </div>
+            <div class="col-md-6 rightside">
+                <p class="center title"><strong>Social Feeds</strong></p>
+                <div class="col-md-12">
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/BipolarArtist/" target="_blank"><i class="foot-icon icon-bipo-fb"></i></a></li>
+                        <li><a href="https://www.instagram.com/bipolarartist/" target="_blank"><i class="foot-icon icon-bipo-ig"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+            
+
+
+
+<script src = './js/bundle.min.js'></script>
+
+
+<script src="./js/fancybox/jquery.fancybox.min.js"></script>
+<script src="./js/noe.min.js"></script>
+        </div>
+    </body>
+
+</html>
