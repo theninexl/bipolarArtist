@@ -210,7 +210,7 @@ weight: 10
 <section class="container-fluid jump-section">
     <div class="row title">
         <div class="col-xs-12 col-md-6 col-md-offset-3">
-            <p class="center"><a href="/embracing-emotions"><strong>Next story:</strong> Embracing Emotions</a></p>
+            <p class="center"><a href="/embracing-emotions.html"><strong>Next story:</strong> Embracing Emotions</a></p>
         </div>
     </div>
 </section>

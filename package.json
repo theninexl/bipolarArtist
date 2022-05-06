@@ -18,7 +18,7 @@
     "copy:allscripts": "npm run copy:jquery && npm run copy:jquery.easing && npm run copy:imagesloaded && npm run copy:ekko && npm run copy:slotmachine && npm run copy:css.slotmachine && npm run copy:jquery-slotmachine && npm run copy:flickity && npm run copy:fancybox && npm run copy:css.fancybox",
     "build:css": "./bin/build-css",
     "watch:css": "./bin/watch-css",
-    "documentation-mode": "npm run copy:allscripts && npm run build:css && DOCUMENTATION_MODE=true hugo server -D --bind=192.168.1.50"
+    "documentation-mode": "npm run copy:allscripts && npm run build:css && DOCUMENTATION_MODE=true hugo server -D"
   },
   "repository": {
     "type": "git",
@@ -45,10 +45,10 @@
     "jquery": "^3.5.1",
     "jquery-slotmachine": "^4.0.1",
     "jquery.easing": "^1.4.1",
+    "node-sass": "^7.0.1",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
     "nodemon": "^2.0.7"
   }
 }

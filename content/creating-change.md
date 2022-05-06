@@ -196,7 +196,7 @@ helped organise Spanish lessons in London.</p>
 <section class="container-fluid jump-section">
     <div class="row title">
         <div class="col-xs-12 col-md-6 col-md-offset-3">
-            <p class="center"><a href="/creating-emotions"><strong>Next story:</strong> Creating Emotions</a></p>
+            <p class="center"><a href="/creating-emotions.html"><strong>Next story:</strong> Creating Emotions</a></p>
         </div>
     </div>
 </section>

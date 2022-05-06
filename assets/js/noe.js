@@ -470,6 +470,8 @@ $(document).on('click', '[data-toggle="lightbox"]', function(event) {
 });
 
 $(document).ready(function(){
+
+
 	var $window = $(window), 
 	$body = $('body'), 
 	screenwidth = $window.width(), 
