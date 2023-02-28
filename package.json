@@ -45,7 +45,7 @@
     "jquery": "^3.5.1",
     "jquery-slotmachine": "^4.0.1",
     "jquery.easing": "^1.4.1",
-    "node-sass": "^7.0.1",
+    "node-sass": "^7.0.3",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
