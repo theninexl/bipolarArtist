@@ -1,53 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/</loc>
     <lastmod>2020-10-14T18:48:21+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/creating-change.html</loc>
     <lastmod>2020-10-14T18:48:21+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/creating-emotions.html</loc>
     <lastmod>2020-10-14T18:48:21+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/embracing-change.html</loc>
     <lastmod>2020-10-14T18:48:21+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/embracing-emotions.html</loc>
     <lastmod>2020-10-14T18:48:21+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/inspiring-change.html</loc>
     <lastmod>2020-10-14T18:48:21+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/inspiring-emotions.html</loc>
     <lastmod>2020-10-14T18:48:21+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/contact.html</loc>
     <lastmod>2020-10-14T18:48:21+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories.html</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags.html</loc>
   </url>
-  
 </urlset>
