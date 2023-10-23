@@ -164,7 +164,7 @@ trunkload of ideas, Noé and Marc quickly started designing lots of weird and wo
 <section class="container-fluid jump-section">
     <div class="row title">
         <div class="col-xs-12 col-md-6 col-md-offset-3">
-            <p class="center"><a href="/embracing-emotions.html"><strong>Next story:</strong> Embracing Emotions</a></p>
+            <p class="center"><a href="/inspiring-change.html"><strong>Next story:</strong> Inspiring change</a></p>
         </div>
     </div>
 </section>

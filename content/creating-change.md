@@ -30,7 +30,7 @@ weight: 10
             <div class="col-xs-12 col-md-4 col-md-offset-1"><p>Creating change is something that’s always at the forefront of our minds, whether it be helping a client rebrand from scratch or encouraging team members to stretch themselves with a new language.</p></div>
             <div class="col-xs-12 col-md-6 col-md-offset-1 no-padding">
                 <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PA1ghAo2Rng?autoplay=1&playlist=PA1ghAo2Rng&loop=1&autohide=1&rel=0&mute=1&origin=http://bipolar-artist.com" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yQu9ExYUAx0?autoplay=1&playlist=yQu9ExYUAx0&loop=1&autohide=1&rel=0&mute=1&origin=http://bipolar-artist.com" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
